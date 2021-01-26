@@ -1,0 +1,13 @@
+.header,  .footer__list, .footer__section,.load-page, .menu-card, .menu-card__description,
+ .menu-card__description__subtitleAndPrice, .menu-card__check, .fonctionnement__section
+ .localisation_reservation, footer{
+    display: flex;
+}
+.fonctionnement, .localisation, .restaurants, .reservation .button, .button__background, .fonctionnement__list, 
+.restaurants__card__description, .restaurants__card__description div{
+    display: grid;
+}
+.header, .localisation, .presentation, .button, .button__background, .fonctionnement__list, .menu-card__check{
+    justify-content: center;
+    align-items: center;
+}

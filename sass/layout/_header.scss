@@ -1,0 +1,15 @@
+@import "../utils/variables";
+
+.header{
+    position: relative;
+    height: 62px;
+    &__logo{
+        font-size: 2rem;
+    }
+    &__arrow{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 1.4rem;
+    }
+}

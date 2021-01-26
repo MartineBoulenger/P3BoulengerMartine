@@ -1,0 +1,53 @@
+@import "../utils/variables";
+
+.button {
+    height: 40px;
+    width: 320px;
+    border-radius: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  margin-top: 20px;
+    box-shadow: 0px 4px 6px 2px $button-box-shadow;
+    color: white;
+    background: linear-gradient($color-secondary, $color-primary);
+    &:hover{
+        background: linear-gradient($color-secondary, 80%, $color-primary);
+        box-shadow: 0 4px 6px 6px $button-box-shadow;
+      
+    }
+  }
+
+.like-button{
+    font-size: 1.5rem;
+    cursor: pointer;
+    &--full{
+        position: absolute; // permet de placer les icônes 2 cœurs les unes sur les autres
+        height: 0%;
+        background-image: linear-gradient($color-primary, $color-secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        // l'arrière plan est limiter au bordure des icones
+        transition: height 1000ms;
+    }
+    &--empty{
+        position: absolute;
+        color: black;
+    }
+    &__container{
+        position: relative;
+        height: 25px;
+        width: 25px;
+        &:hover > .like-button--full{
+            height: 100%; // remplissage du coeur par progression
+            transition: height 1000ms;
+        }
+        &:hover > .like-button--empty{
+            background-image: linear-gradient($color-primary, $color-secondary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    }
+}

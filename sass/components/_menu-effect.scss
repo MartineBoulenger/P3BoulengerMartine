@@ -1,0 +1,23 @@
+@keyframes card-slide{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@for $i from 1 through 4{
+    .entry__card:nth-child(#{$i}){
+        animation: card-slide 1500ms 400ms*$i forwards;
+        // demarrage en cascade
+    }
+    .main__card:nth-child(#{$i}){
+        animation: card-slide 1500ms 400ms*$i+1200ms forwards;
+        // commencer 1200ms apres le starter div
+    }
+    .dessert__card:nth-child(#{$i}){
+        animation: card-slide 1500ms 400ms*$i+2400ms forwards;
+        // démarrer 1200ms après starter__div et 1200ms après main__div
+    }
+}

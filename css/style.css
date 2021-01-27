@@ -67,7 +67,7 @@ p {
       color: transparent; }
 
 .header, .footer__list, .footer__section, .load-page, .menu-card, .menu-card__description,
-.menu-card__description__subtitleAndPrice, .menu-card__check, .fonctionnement__section
+.menu-card__description__subtitle-tarif, .menu-card__check, .fonctionnement__section
 .localisation_reservation, footer {
   display: flex; }
 
@@ -247,7 +247,7 @@ body {
   font-family: "roboto", sans-serif; }
 
 .header, .footer__list, .footer__section, .load-page, .menu-card, .menu-card__description,
-.menu-card__description__subtitleAndPrice, .menu-card__check, .fonctionnement__section
+.menu-card__description__subtitle-tarif, .menu-card__check, .fonctionnement__section
 .localisation_reservation, footer {
   display: flex; }
 
@@ -345,7 +345,6 @@ p {
   font-family: "roboto", sans-serif;
   font-size: 14px;
   margin: 0;
-  overflow: hidden;
   white-space: nowrap;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis; }
@@ -597,12 +596,56 @@ h4 {
       -webkit-background-clip: text;
       color: transparent; }
 
+.restaurants {
+  padding: 30px 20px 45px 20px;
+  background-color: #F6F6F6; }
+  .restaurants__title {
+    font-weight: 800; }
+  .restaurants a {
+    display: block;
+    height: 100%;
+    width: 100%; }
+  .restaurants__like-button {
+    position: absolute;
+    right: 30px;
+    bottom: 25px; }
+  .restaurants__card {
+    position: relative;
+    height: 250px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 10px 0 #E5E5E5;
+    background-color: white; }
+    .restaurants__card__new {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      background-color: #99E2D0;
+      color: #2a947a; }
+    .restaurants__card__photo {
+      height: 70%; }
+      .restaurants__card__photo img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0; }
+    .restaurants__card__description {
+      height: 30%;
+      padding-left: 15px;
+      border-radius: 0 0 15px 15px; }
+      .restaurants__card__description--title {
+        flex-direction: column;
+        justify-content: center; }
+
 .bloc-page {
   position: relative; }
 
 .banner {
   position: absolute;
-  z-index: -1;
   height: 300px;
   width: 100%; }
   .banner__photo {
@@ -620,7 +663,7 @@ h4 {
     margin: 25px 0 15px 20px; }
   .menu__like-button {
     position: absolute;
-    top: 32px;
+    top: 75px;
     right: 30px; }
   .menu__category-title {
     margin-left: 5px;
@@ -636,7 +679,11 @@ h4 {
   .menu__list {
     padding: 0 10px; }
   .menu__button {
-    margin: 30px auto; }
+    margin: 40px auto;
+    width: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px; }
   .menu .menu-card {
     justify-content: center;
     height: 70px;
@@ -658,7 +705,7 @@ h4 {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis; }
-      .menu .menu-card__description__price {
+      .menu .menu-card__description__tarif {
         margin-right: 20px;
         font-weight: 700; }
     .menu .menu-card__check {
@@ -699,12 +746,11 @@ footer {
   color: #fff; }
 
 .footer__logo {
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
   width: 105px;
   height: 15px;
-  padding: 2rem 0 1.5rem 0;
-  margin: 0 0 0 -10px; }
+  padding: 0.5rem 0 2.5rem 0.5rem;
+  margin: 0 0 0 -10px;
+  color: #fff; }
 
 @keyframes logo-beats {
   0% {

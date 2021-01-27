@@ -33,7 +33,7 @@ body {
   font-family: "roboto", sans-serif;
 }
 .header,  .footer__list, .footer__section,.load-page, .menu-card, .menu-card__description,
- .menu-card__description__subtitleAndPrice, .menu-card__check, .fonctionnement__section
+ .menu-card__description__subtitle-tarif, .menu-card__check, .fonctionnement__section
  .localisation_reservation, footer{
     display: flex;
 }
@@ -149,7 +149,6 @@ p {
   font-family: "roboto", sans-serif;
   font-size: 14px;
   margin: 0;
-  overflow: hidden;
   white-space: nowrap;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -247,7 +246,6 @@ padding-bottom: 10px;
 border-radius: 30px;
   align-items: center;
   width: 100%;
-
   grid-column-start: 2;
 }
 @media screen and (max-width: 768px) {
@@ -407,7 +405,7 @@ border-radius: 30px;
   &--full{
       position: absolute; // permet de placer les icônes 2 cœurs les unes sur les autres
       height: 0%;
-      background-image: linear-gradient($color-primary, $color-secondary);
+      background-image: linear-gradient($color-primary, $color-secondary);// gadué de couleurs
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
@@ -425,11 +423,11 @@ border-radius: 30px;
      
       height: 25px;
       width: 25px;
-      &:hover > .like-button--full{
+      &:hover > .like-button--full{// coeur plein
           height: 100%; // remplissage du coeur par progression
           transition: height 1000ms;
       }
-      &:hover > .like-button--empty{
+      &:hover > .like-button--empty{//coeur vide
           background-image: linear-gradient($color-primary, $color-secondary);
           background-clip: text;
           -webkit-background-clip: text;
@@ -438,8 +436,62 @@ border-radius: 30px;
   }
 }
 
-
-  // ------ MENUS -----//
+// bloc restaurant
+.restaurants{
+  padding: 30px 20px 45px 20px;
+  background-color: $background-light;
+  &__title{
+      font-weight: 800;
+  }
+  & a{ // étendre la lien
+      display: block;
+      height: 100%;
+      width: 100%;
+  }
+  &__like-button{
+      position: absolute;
+      right: 30px;
+      bottom: 25px;
+  }
+  &__card{
+      position: relative; // placement de l'icone coeur. le fait de le mettre en absolu nous permet de le positionner comme nous le voulons
+      height: 250px;
+      margin-bottom: 15px;
+      border-radius: 15px;
+      box-shadow: 0 8px 10px 0 $cards-box-shadow;
+      background-color: white;
+      &__new{
+          position: absolute; // placement de l'encare "nouveau"
+          top: 12px;
+          right: 12px;
+          padding: 5px 10px;
+          border-radius: 3px;
+          font-size: 0.9rem;
+          font-weight: 600;
+          background-color: $color-tertiary;
+          color: darken($color-tertiary, 37%);
+      }
+      &__photo{
+          height: 70%;
+          & img{
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              border-radius: 15px 15px 0 0;
+          }
+      }
+      &__description{
+          height: 30%;
+          padding-left: 15px;
+          border-radius: 0 0 15px 15px;
+          &--title{
+              flex-direction: column;
+              justify-content: center; //centre le titre verticalement
+          }
+      }
+  }
+}
+ 
 
 // ------ MENUS -----//
 
@@ -450,7 +502,7 @@ border-radius: 30px;
 // BANNER
 .banner{
   position: absolute;
-  z-index: -1; // to place the banner under the menu
+  
   height: 300px;
   width: 100%;
   &__photo{
@@ -462,8 +514,8 @@ border-radius: 30px;
 
 // MENU
 .menu{
-  position: relative; // to place the like icon where we want
-  margin-top: 230px; // to make a space between the menu & the header to see the banner
+  position: relative; //emplacement de l'icone
+  margin-top: 230px; // permet d'afficher la bannière en créant un espace
   padding: 5px 5px 40px 5px;
   border-radius: 40px;
   background-color: $background-light;
@@ -472,7 +524,7 @@ border-radius: 30px;
   }
   &__like-button{
       position: absolute;
-      top: 32px;
+      top: 75px;
       right: 30px;
   }
   &__category-title{
@@ -492,7 +544,13 @@ border-radius: 30px;
       padding: 0 10px;
   }
   &__button{
-      margin: 30px auto;
+      margin: 40px auto;
+      width:100px ;
+      padding-left: 100px;
+      padding-right: 100px;
+      padding-top: 20px;
+      
+    
   }
 
 .menu-card{
@@ -500,7 +558,7 @@ border-radius: 30px;
       height: 70px;
       width: 0%;
       margin-bottom: 15px;
-      overflow: hidden; // to hide check box overflow when it's reduce
+      overflow: hidden; // cache le dépassement à la réduction
       border-radius: 20px;
       box-shadow: 0 8px 10px 0 $cards-box-shadow;
       background-color: white;
@@ -510,37 +568,37 @@ border-radius: 30px;
           justify-content: center;
           width: 100%;
           margin-left: 10px;
-          transition: width 1000ms; // to do transition when it gets bigger
+          transition: width 1000ms; //permet l'agrandissement à la transition
           &__title, &__subtitle{
               width: 100%;
               overflow: hidden;
               white-space: nowrap;
               text-overflow: ellipsis;
           }
-          &__price{
+          &__tarif{
               margin-right: 20px;
               font-weight: 700;
           }
       }
       &__check{
           width: 0%;
-          overflow: hidden; // to hide the check icon when the check box is reduce
+          overflow: hidden; // masque l'icone à la coche
           border-radius: 0 20px 20px 0;
           font-size: 1.4rem;
           color: white;
           background-color: $color-tertiary;
-          transition: all 1000ms; // to do transition when it gets smaller
+          transition: all 1000ms; // transition à la réduction
       }
       &:hover > .menu-card__description{
-          width: 80%; // gets description smaller
+          width: 80%; // la description est plus petite
           transition: all 500ms;
       }
       &:hover > .menu-card__check{
-          width: 20%; // gets check box bigger
+          width: 20%; // la case est plus grande
           transition: all 500ms;
       }
       &:hover .menu-card__check i{
-          transform: rotate(360deg); // rotate the icon check
+          transform: rotate(360deg); // icone tourne
           transition: all 500ms;
       }
   }
@@ -565,12 +623,12 @@ footer {
   color: #fff;
 }
 .footer__logo {
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
+
   width: 105px;
   height: 15px;
-  padding: 2rem 0 1.5rem 0;
+  padding: 0.5rem 0 2.5rem 0.5rem;
   margin: 0 0 0 -10px;
+  color: #fff;
 }
 @keyframes logo-beats {
   0%{

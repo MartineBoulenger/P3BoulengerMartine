@@ -1,0 +1,11 @@
+{
+  "name": "ohmyfood2grid",
+  "version": "1.0.0",
+  "description": "site ohmyfood avec grid",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "author": "Boulenger Martine",
+  "license": "ISC"
+}

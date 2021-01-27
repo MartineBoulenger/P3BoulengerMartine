@@ -284,7 +284,6 @@ li {
   grid-column-start: 2;
   padding: 0 0 0 0;
   font-size: 1rem;
-  background: #f6f6f6;
   border-bottom: 5px solid #9356dc;
   margin-top: 65px; }
 
@@ -309,8 +308,7 @@ li {
   .restaurants {
     grid-template-columns: 1fr 90% 1fr;
     grid-template-rows: none;
-    gap: 0;
-    background: #f6f6f6; } }
+    gap: 0; } }
 .restaurants__1 {
   grid-column-start: 2;
   grid-row-start: 2; }
@@ -428,6 +426,7 @@ h4 {
   margin: 1.5rem 0 25px 0;
   padding: 1.8rem 0 1.3rem 0;
   background-color: #fff;
+  border-radius: 30px;
   align-items: center;
   width: 100%;
   grid-column-start: 2; }
@@ -469,7 +468,6 @@ h4 {
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
-  background-color: #f6f6f6;
   font-size: 24px;
   border-bottom: 5px solid #9356dc;
   padding-bottom: 80px;
@@ -497,7 +495,6 @@ h4 {
   padding-bottom: 30px;
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: #eaeaea;
   margin-top: 0px; }
 
 .localisation_reservation--fas {
@@ -521,13 +518,11 @@ h4 {
   font-family: "roboto", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
-  padding: 1rem 0 1rem 0;
-  background-color: #eaeaea; }
+  padding: 1rem 0 1rem 0; }
 
 @media screen and (max-width: 768px) {
   .fonctionnement__title {
     grid-column-start: 2;
-    background-color: #fff;
     -webkit-box-shadow: none;
     box-shadow: none;
     padding: 3.5rem 0 2rem 0;

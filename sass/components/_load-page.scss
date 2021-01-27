@@ -1,0 +1,41 @@
+@import "../utils/variables";
+//page de chargement
+
+@keyframes logo-beats {
+    0%{
+        transform: scale(1);
+    }
+    30% {
+      transform: scale(1.15);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes load-page_slide {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-100vh);
+    }
+}
+
+.load-page{
+    position: absolute;
+    // display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    // permet le lancement avant la page d'acceuil
+    height: 100vh;
+    width: 100vw;
+    // prendre tout l'écran pour tout format
+    background-color: linear-gradient($color-tertiary, $color-secondary, $color-primary, $color-secondary, $color-tertiary);
+     // dégradé de couleur fond d'écran
+    animation: load-page_slide 1500ms 5000ms forwards;
+   
+    
+}

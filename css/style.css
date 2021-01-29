@@ -68,11 +68,11 @@ p {
 
 .header, .footer__list, .footer__section, .load-page, .menu-card, .menu-card__description,
 .menu-card__description__subtitle-tarif, .menu-card__check, .fonctionnement__section
-.localisation_reservation, footer {
+.localisation_reservation {
   display: flex; }
 
 .fonctionnement, .localisation, .restaurants, .reservation .button, .button__background, .fonctionnement__list,
-.restaurants__card__description, .restaurants__card__description div {
+.restaurants__card__description, .restaurants__card__description div, .menu, footer {
   display: grid; }
 
 .header, .localisation, .presentation, .button, .button__background, .fonctionnement__list, .menu-card__check {
@@ -157,9 +157,9 @@ p {
 .footer {
   padding: 22px 30px;
   background-color: #353535;
-  color: white; }
+  color: #fff; }
   .footer a {
-    color: white; }
+    color: #fff; }
   .footer__logo {
     display: block;
     margin-bottom: 15px;
@@ -235,7 +235,7 @@ p {
   z-index: 1;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(#99e2d0, #9356dc, #ff79da, #9356dc, #99e2d0);
+  background: linear-gradient(#99E2D0, #9356DC, #FF79DA, #9356DC, #99E2D0);
   animation: load-page_slide 1500ms 5000ms forwards; }
 
 .load-page__logo {
@@ -246,13 +246,13 @@ body {
   margin: 0;
   font-family: "roboto", sans-serif; }
 
-.header, .footer__list, .footer__section, .load-page, .menu-card, .menu-card__description,
+.footer__list, .footer__section, .load-page, .menu-card, .menu-card__description,
 .menu-card__description__subtitle-tarif, .menu-card__check, .fonctionnement__section
-.localisation_reservation, footer {
+.localisation_reservation {
   display: flex; }
 
-.fonctionnement, .localisation, .restaurants, .reservation .button, .button__background, .fonctionnement__list,
-.restaurants__card__description, .restaurants__card__description div {
+.header, .fonctionnement, .localisation, .restaurants, .reservation .button, .button__background, .fonctionnement__list,
+.restaurants__card__description, .restaurants__card__description div, .menu, footer {
   display: grid; }
 
 .header, .localisation, .presentation, .button, .button__background, .fonctionnement__list, .menu-card__check {
@@ -284,7 +284,7 @@ li {
   grid-column-start: 2;
   padding: 0 0 0 0;
   font-size: 1rem;
-  border-bottom: 5px solid #9356dc;
+  border-bottom: 5px solid #9356DC;
   margin-top: 65px; }
 
 @media screen and (max-width: 768px) {
@@ -407,7 +407,7 @@ h4 {
   margin-top: 120px;
   padding-top: 10px;
   box-shadow: 0px 4px 6px 2px #BCBCBC;
-  color: white;
+  color: #fff;
   background: linear-gradient(#FF79DA, #9356DC); }
   .button:hover {
     background: linear-gradient(#FF79DA, 80%, #9356DC);
@@ -432,12 +432,12 @@ h4 {
 
 @media screen and (max-width: 768px) {
   .fonctionnement__section {
-    background-color: #f6f6f6;
+    background-color: #F6F6F6;
     margin: 0 0 25px 0; } }
 .fonctionnement__section__number {
   color: #fff;
-  background-color: #9356dc;
-  border: 1px solid #9356dc;
+  background-color: #9356DC;
+  border: 1px solid #9356DC;
   border-radius: 50%;
   padding: 4px 8px 4px 8px;
   margin: 0 1.5rem 0 -12px; }
@@ -449,11 +449,11 @@ h4 {
   box-shadow: 3px 3px 20px #c6bfbf; }
 
 .fonctionnement__section:hover .fonctionnement__section__icon {
-  color: #9356dc; }
+  color: #9356DC; }
 
 .restaurants__card__new {
   border-radius: 3px;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   color: #217460;
   padding: 5px;
   position: absolute;
@@ -468,7 +468,7 @@ h4 {
   flex-direction: column;
   text-align: center;
   font-size: 24px;
-  border-bottom: 5px solid #9356dc;
+  border-bottom: 5px solid #9356DC;
   padding-bottom: 80px;
   margin-top: 44px; }
 
@@ -538,7 +538,7 @@ h4 {
 
 @media screen and (max-width: 768px) {
   .restaurants__title {
-    background: #f6f6f6;
+    background: #F6F6F6;
     padding: 3.8rem 0 1.5rem 0;
     grid-column-start: 2;
     grid-row-start: 1; } }
@@ -615,7 +615,7 @@ h4 {
     margin-bottom: 15px;
     border-radius: 15px;
     box-shadow: 0 8px 10px 0 #E5E5E5;
-    background-color: white; }
+    background-color: #fff; }
     .restaurants__card__new {
       position: absolute;
       top: 12px;
@@ -640,9 +640,6 @@ h4 {
       .restaurants__card__description--title {
         flex-direction: column;
         justify-content: center; }
-
-.bloc-page {
-  position: relative; }
 
 .banner {
   position: absolute;
@@ -692,7 +689,7 @@ h4 {
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 8px 10px 0 #E5E5E5;
-    background-color: white;
+    background-color: #fff;
     cursor: pointer; }
     .menu .menu-card__description {
       flex-direction: column;
@@ -713,7 +710,7 @@ h4 {
       overflow: hidden;
       border-radius: 0 20px 20px 0;
       font-size: 1.4rem;
-      color: white;
+      color: #fff;
       background-color: #99E2D0;
       transition: all 1000ms; }
     .menu .menu-card:hover > .menu-card__description {
@@ -729,14 +726,10 @@ h4 {
 footer {
   background-color: #353535;
   font-family: "roboto", sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0 0 0 1.5rem;
   font-size: 12px; }
 
 .footer__section {

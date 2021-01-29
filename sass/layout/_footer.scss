@@ -3,9 +3,9 @@
 .footer{
     padding: 22px 30px;
     background-color: $background-dark;
-    color: white;
+    color: $color-white;
     & a{
-        color: white;
+        color: $color-white;
     }
     &__logo{
         display: block;

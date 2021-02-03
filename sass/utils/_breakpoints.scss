@@ -1,4 +1,4 @@
-// Mobile S --> adapt titles sizes to smalls devices
+// Mobile S --> adapter la taille des titres aux petits appareils
 @media (max-width: 319px) {
     .presentation__title{
         font-size: 1.4rem;
@@ -18,13 +18,13 @@
         &__title{
             font-size: 0.8rem;
         }
-        &__subtitleAndPrice{
+        &__subtitle-tarif{
             font-size: 0.7rem;
         }
     }
 }
 
-// Mobile M --> adapt titles sizes
+// Mobile M --> adapter la taille des titres
 @media (min-width: 320px) and (max-width: 374px) {
     .menu__title{
         font-size: 1.4rem;
@@ -33,28 +33,28 @@
         &__title{
             font-size: 0.9rem;
         }
-        &__subtitleAndPrice{
+        &__subtitle-tarif{
             font-size: 0.8rem;
         }
     }
 }
 
-// Mobile L --> adapt titles sizes
+// Mobile L --> adapter la taille des titres
 @media (min-width: 375px) and (max-width: 424px) {
     .menu-card__description{
         &__title{
             font-size: 1rem;
         }
-        &__subtitleAndPrice{
+        &__subtitle-tarif{
             font-size: 0.9rem;
         }
     }
 }
 
-// Tablet landscape & bigger
+// Tablette format paysage et plus grand
 @media (min-width: 768px) {
     .operation, .menu__list{
-        width: 70%; // to center them
+        width: 70%; // centrer
         margin: 0 auto;
     }
     .restaurants__list{
@@ -62,34 +62,34 @@
         justify-content: space-around;
         flex-wrap: wrap;
         & > *{
-            width: 45%; // to place 2 cards per line
+            width: 45%; //pour placer 2 cartes par ligne
         }
     }
 }
 
-// Reduce menu-card description's text on small laptops
+//Réduire le texte de la description de la carte de menu sur les petits ordinateurs portables
 @media (min-width: 1024px) and (max-width: 1299px) {
     .menu-card__description{
         &__title{
             font-size: 1rem;
         }
-        &__subtitleAndPrice{
+        &__subtitle-tarif{
             font-size: 0.8rem;
         }
     }
 }
 
-// Laptop et desktop
+// portabe et bureau
 @media (min-width: 1024px) {
     .menu__list{
         display: flex;
         justify-content: space-around;
         width: 95%;
         & > *{
-            width: 31%; // to place all menu sections on a row
+            width: 31%; //  pour placer toutes les sections de menu sur une rangée
         }
     }
     .restaurants__list > *{
-        width: 24%; // to place 4 cards per line
+        width: 24%; // pour placer 4 cartes par ligne
     }
 }

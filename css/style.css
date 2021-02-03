@@ -66,14 +66,14 @@ p {
       -webkit-background-clip: text;
       color: transparent; }
 
+.fonctionnement, .localisation, .restaurants, .reservation .button, .button__background, .fonctionnement__list,
+.restaurants__card__description, .restaurants__card__description div, .menu, footer {
+  display: grid; }
+
 .header, .footer__list, .footer__section, .load-page, .menu-card, .menu-card__description,
 .menu-card__description__subtitle-tarif, .menu-card__check, .fonctionnement__section
 .localisation_reservation {
   display: flex; }
-
-.fonctionnement, .localisation, .restaurants, .reservation .button, .button__background, .fonctionnement__list,
-.restaurants__card__description, .restaurants__card__description div, .menu, footer {
-  display: grid; }
 
 .header, .localisation, .presentation, .button, .button__background, .fonctionnement__list, .menu-card__check {
   justify-content: center;
@@ -186,7 +186,7 @@ p {
 
   .menu-card__description__title {
     font-size: 0.8rem; }
-  .menu-card__description__subtitleAndPrice {
+  .menu-card__description__subtitle-tarif {
     font-size: 0.7rem; } }
 @media (min-width: 320px) and (max-width: 374px) {
   .menu__title {
@@ -194,12 +194,12 @@ p {
 
   .menu-card__description__title {
     font-size: 0.9rem; }
-  .menu-card__description__subtitleAndPrice {
+  .menu-card__description__subtitle-tarif {
     font-size: 0.8rem; } }
 @media (min-width: 375px) and (max-width: 424px) {
   .menu-card__description__title {
     font-size: 1rem; }
-  .menu-card__description__subtitleAndPrice {
+  .menu-card__description__subtitle-tarif {
     font-size: 0.9rem; } }
 @media (min-width: 768px) {
   .operation, .menu__list {
@@ -215,7 +215,7 @@ p {
 @media (min-width: 1024px) and (max-width: 1299px) {
   .menu-card__description__title {
     font-size: 1rem; }
-  .menu-card__description__subtitleAndPrice {
+  .menu-card__description__subtitle-tarif {
     font-size: 0.8rem; } }
 @media (min-width: 1024px) {
   .menu__list {
@@ -614,7 +614,7 @@ h4 {
     height: 250px;
     margin-bottom: 15px;
     border-radius: 15px;
-    box-shadow: 0 8px 10px 0 #E5E5E5;
+    box-shadow: 0 8px 10px 0 #c4bebe;
     background-color: #fff; }
     .restaurants__card__new {
       position: absolute;
@@ -687,8 +687,8 @@ h4 {
     width: 0%;
     margin-bottom: 15px;
     overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 8px 10px 0 #E5E5E5;
+    border-radius: 20px #c4bebe;
+    box-shadow: 0 8px 10px 0 #c4bebe;
     background-color: #fff;
     cursor: pointer; }
     .menu .menu-card__description {

@@ -3,7 +3,8 @@
 @import "./base/base";
 @import "./base/typography";
 @import "./components/buttons";
-@import "./components/grid-et-flex";
+@import "./components/grid";
+@import "./components/flex";
 @import "./components/load-page";
 @import "./components/menu-effect";
 @import "./layout/header";
@@ -172,7 +173,7 @@ h2 {
   margin: 0;
   overflow: hidden;
   white-space: nowrap;
-  -o-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis; //Le rognage se fera à la bordure de la boîte par ...
   text-overflow: ellipsis;
 }
 h3 {
@@ -551,17 +552,19 @@ border-radius: 30px;
     
   }
 
-.menu-card{
+.menu-card
+{
       justify-content: center; 
       height: 70px;
       width: 0%;
       margin-bottom: 15px;
       overflow: hidden; // cache le dépassement à la réduction
-      border-radius: 20px;
+      border-radius: 20px $cards-box-shadow;
       box-shadow: 0 8px 10px 0 $cards-box-shadow;
       background-color:$color-white;
       cursor: pointer;
-      &__description{
+      &__description
+      {
           flex-direction: column;
           justify-content: center;
           width: 100%;

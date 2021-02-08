@@ -71,11 +71,11 @@ li {
 }
 .fonctionnement {
   display: grid;
-  
+  padding-left: 15px;
+  padding-right: 15px;
   grid-column-start: 2;
-  padding: 0 0 0 0;
+ 
   font-size: 1rem;
-  border-bottom: 5px solid $color-primary;
   margin-top: 65px;
 }
 
@@ -93,7 +93,9 @@ li {
   grid-template-columns: 25% 25% 25% 25%;
   margin-left: 15px;
   margin-right: 15px;
+  margin-top: 35px;
 grid-template-rows: 20% 80%;
+height: 400px;
 gap: 1rem;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -105,11 +107,13 @@ gap: 1rem;
     grid-template-columns: 1fr 90% 1fr;
     grid-template-rows: none;
     margin: 0;
+    height: 100%;
+   padding: 0px;
 
   }
 }
 .restaurants__1 {
-margin-top: 155px;
+margin-top: 95px;
  
 }
 @media screen and (max-width: 768px) {
@@ -117,10 +121,11 @@ margin-top: 155px;
     grid-column-start: 2;
     grid-row-start: 2;
     margin-top: 0;
+   
   }
 }
 .restaurants__2 {
-  margin-top: 155px;
+  margin-top: 95px;
 
 }
 @media screen and (max-width: 768px) {
@@ -130,14 +135,18 @@ margin-top: 155px;
     margin-top: 0;
   }
 }
-
+.restaurants__3 {
+  height: 250px;
+}
 @media screen and (max-width: 768px) {
   .restaurants__3 {
     grid-column-start: 2;
     grid-row-start: 4;
   }
 }
-
+.restaurants__4 {
+ height: 250px;
+}
 @media screen and (max-width: 768px) {
   .restaurants__4 {
     grid-column-start: 2;
@@ -227,7 +236,8 @@ padding-bottom: 10px;
 @media screen and (max-width: 768px) {
   .button {
     font-size: 1rem;
-    margin-right: 80px;
+    margin-right: 40px;
+    margin-left: 250px;
     padding: 0;
     margin-top: 40px;
     width: 250px;
@@ -248,6 +258,10 @@ border-radius: 30px;
   grid-column-start: 2;
 }
 @media screen and (max-width: 768px) {
+  
+  .fonctionnement{
+    margin-left: 20px;
+  }
   .fonctionnement__section {
     background-color: $background-light;
     margin: 0 0 25px 0;
@@ -288,7 +302,6 @@ border-radius: 30px;
   flex-direction: column;
   text-align: center;
   font-size: 24px;
-  border-bottom: 5px solid $color-primary;
   padding-bottom: 80px;
   margin-top: 44px;
 }
@@ -446,7 +459,7 @@ padding-left: 270px;
   }
   & a{ // étendre la lien
       display: block;
-      height: 100%;
+      height: 250px;
       width: 100%;
   }
   &__like-button{
@@ -548,10 +561,8 @@ padding-left: 270px;
       padding-left: 100px;
       padding-right: 100px;
       padding-top: 20px;
-      
+  }  
     
-  }
-
 .menu-card
 {
       justify-content: center; 
@@ -608,7 +619,7 @@ footer {
   display: grid;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-
+margin-top: 20px;
   flex-direction: column;
 
   font-size: 12px;
@@ -660,13 +671,144 @@ footer {
   .entry__card:nth-child(#{$i}){
       animation: card-slide 1500ms 400ms*$i forwards;
       // demarrage en cascade
+      border: 2px solid $cards-box-shadow;
+      border-radius: 25px;
+      background-color:$cards-box-shadow ;
   }
   .main__card:nth-child(#{$i}){
       animation: card-slide 1500ms 400ms*$i+1200ms forwards;
       // commencer 1200ms apres le starter div
+      border: 2px solid $cards-box-shadow;
+      border-radius: 25px;
+      background-color:$cards-box-shadow ;
   }
   .dessert__card:nth-child(#{$i}){
       animation: card-slide 1500ms 400ms*$i+2400ms forwards;
       // démarrer 1200ms après starter__div et 1200ms après main__div
+      border: 2px solid $cards-box-shadow;
+      border-radius: 25px;
+      background-color:$cards-box-shadow ;
   }
+}
+// Mobile S --> adapter la taille des titres aux petits appareils
+@media (max-width: 319px) {
+  .presentation__title{
+      font-size: 1.4rem;
+  }
+  .restaurants__card__description--title{
+      font-size: 0.9rem;
+  }
+  .menu{
+      &__title{
+      font-size: 1.2rem;
+      }
+      &__like-button{
+          top: 20px;
+      }
+  }
+  .menu-card__description{
+      &__title{
+          font-size: 0.8rem;
+      }
+      &__subtitle-tarif{
+          font-size: 0.7rem;
+      }
+  }
+}
+
+// Mobile M --> adapter la taille des titres et bouton
+@media (min-width: 320px) and (max-width: 374px) {
+  .menu__title{
+      font-size: 1.4rem;
+  }
+  .menu-card__description{
+      &__title{
+          font-size: 0.9rem;
+      }
+      &__subtitle-tarif{
+          font-size: 0.8rem;
+      }
+  }
+  .button {
+    font-size: 1rem;
+    margin-right: 40px;
+    margin-left: 80px;
+    padding: 0;
+    margin-top: 40px;
+    width: 200px;
+ }
+}
+
+// Mobile L --> adapter la taille des titres
+@media (min-width: 375px) and (max-width: 424px) {
+  .menu-card__description{
+      &__title{
+          font-size: 1rem;
+      }
+      &__subtitle-tarif{
+          font-size: 0.9rem;
+      }
+  }
+}
+
+// Tablette format paysage et plus grand
+@media (min-width: 768px) {
+  .operation, .menu__list{
+      width: 70%; // centrer
+      margin: 0 auto;
+  }
+  .restaurants__list{
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      & > *{
+          width: 45%; //pour placer 2 cartes par ligne
+      }
+  }
+}
+
+//Réduire le texte de la description de la carte de menu sur les petits ordinateurs portables
+@media (min-width: 1024px) and (max-width: 1299px) {
+  .menu-card__description{
+      &__title{
+          font-size: 1rem;
+      }
+      &__subtitle-tarif{
+          font-size: 0.8rem;
+      }
+  }
+}
+
+// portabe et bureau
+@media (min-width: 1024px) {
+  .menu__list{
+      display: flex;
+      justify-content: space-around;
+      width: 95%;
+      & > *{
+          width: 31%; //  pour placer toutes les sections de menu sur une rangée
+      }
+  }
+  .restaurants__list > *{
+      width: 24%; // pour placer 4 cartes par ligne
+  }
+}
+@media (min-width: 343px) and (max-width: 767.98px) {
+  .button {
+    font-size: 1rem;
+    margin-right: 40px;
+    margin-left: 80px;
+    padding: 0;
+    margin-top: 40px;
+    width: 200px;
+ }
+ .menu__button.button{
+margin-left: 60px;
+width: 100px;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 40px;
+  
+
+}
 }

@@ -1,0 +1,25 @@
+@import "../utils/variables";
+
+.footer{
+    padding: 22px 30px;
+    background-color: $background-dark;
+    color: $color-white;
+    & a{
+        color: $color-white;
+    }
+    &__logo{
+        display: block;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+    }
+    &__list{
+        flex-direction: column;
+    }
+    &__section{
+        margin-bottom: 8px;
+        & i{
+            width: 25px;
+            font-size: 0.8rem;
+        }
+    }
+}

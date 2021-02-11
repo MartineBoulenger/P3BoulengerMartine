@@ -347,12 +347,14 @@ li {
     grid-row-start: 3;
     margin-top: 0; } }
 .restaurants__3 {
-  height: 250px; }
+  height: 250px;
+  margin-top: 95px; }
 
 @media screen and (max-width: 768px) {
   .restaurants__3 {
     grid-column-start: 2;
-    grid-row-start: 4; } }
+    grid-row-start: 4;
+    margin-top: 10px; } }
 .restaurants__4 {
   height: 250px; }
 
@@ -555,8 +557,7 @@ h4 {
   font-weight: bold;
   background: #fff;
   margin: 0;
-  padding-left: 270px;
-  grid-column-start: 2; }
+  grid-column-start: 1; }
 
 @media screen and (max-width: 768px) {
   .restaurants__title {
@@ -919,7 +920,7 @@ footer {
 
   .restaurants__list > * {
     width: 24%; } }
-@media (min-width: 343px) and (max-width: 1021.98px) {
+@media (min-width: 343px) and (max-width: 1023.98px) {
   .like-button {
     position: absolute;
     margin-left: 35px; }

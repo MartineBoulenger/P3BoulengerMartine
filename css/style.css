@@ -919,7 +919,11 @@ footer {
 
   .restaurants__list > * {
     width: 24%; } }
-@media (min-width: 343px) and (max-width: 767.98px) {
+@media (min-width: 343px) and (max-width: 1021.98px) {
+  .like-button {
+    position: absolute;
+    margin-left: 35px; }
+
   .button {
     font-size: 1rem;
     margin-right: 40px;

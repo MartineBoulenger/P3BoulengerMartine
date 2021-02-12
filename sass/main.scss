@@ -38,7 +38,7 @@ body {
  .localisation_reservation {
     display: flex;
 }
-.header, .fonctionnement, .localisation, .restaurants, .reservation .button, .button__background, .fonctionnement__list, 
+.header, .fonctionnement, .localisation, .restaurants, .button__background, .fonctionnement__list, 
 .restaurants__card__description, .restaurants__card__description div, .menu, footer{
     display: grid;
 }
@@ -239,7 +239,7 @@ padding-bottom: 10px;
   .button {
     font-size: 1rem;
     margin-right: 40px;
-    margin-left: 250px;
+  padding-right: 50px;
     padding: 0;
     margin-top: 40px;
     width: 250px;
@@ -315,6 +315,10 @@ border-radius: 30px;
     margin-bottom: 0;
     justify-content: center;
   }
+  .descriptif.button{
+    padding: 0px;
+    margin:0px;
+  }
 }
 .descriptif {
   margin: 3rem 0 0 0;
@@ -375,7 +379,6 @@ border-radius: 30px;
   font-family: "roboto", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
-  background: $color-white;
   margin: 0;
   grid-column-start: 1;
 }
@@ -557,10 +560,10 @@ border-radius: 30px;
       padding: 0 10px;
   }
   &__button{
-      margin: 40px auto;
+ 
       width:100px ;
-      padding-left: 100px;
-      padding-right: 100px;
+      padding-left: 60px;
+      padding-right: 50px;
       padding-top: 20px;
   }  
     
@@ -794,7 +797,7 @@ margin-top: 20px;
       width: 24%; // pour placer 4 cartes par ligne
   }
 }
-@media (min-width: 343px) and (max-width: 1023.98px)  {
+@media (min-width: 343px) and (max-width: 768.98px)  {
   .like-button{
     position: absolute;
     margin-left: 35px;
@@ -809,12 +812,43 @@ margin-top: 20px;
     width: 200px;
  }
  .menu__button.button{
-margin-left: 60px;
-width: 100px;
-  padding-top: 20px;
-  padding-left: 50px;
-  padding-right: 40px;
-  
+width: 150px;
+padding-top: 20px;
+padding-left: 100px;
+margin-left: 20px;
+}
+}
+@media (min-width: 319px) and (max-width: 342.98px){
+  .menu__button.button{
+    margin-left: 40px;
+    width: 100px;
+    padding-left: 50px;
+    padding-top: 20px;
+    
+    }
 
 }
+@media (min-width: 766.98px) and (max-width: 1023.98px){
+  .menu__button.button{
+    margin-left: 250px;
+    width: 150px;
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-right: 50px;
+    margin-right: 0px;
+    }
+}
+@media (max-width: 343px)  {
+  .like-button{
+    position: relative;
+    margin-left: 35px;
+}
+.menu__button.button{
+  margin-left: 0px;
+  width: 100px;
+  padding-left: 50px;
+  padding-top: 20px;
+  padding-right: 30px;
+}
+
 }

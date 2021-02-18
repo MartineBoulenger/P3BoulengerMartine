@@ -48,6 +48,9 @@ body {
 }
 
 /*----- page index.html-----*/
+h1{
+  font-family: "roboto", sans-serif;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -171,7 +174,7 @@ p {
 h1 {
   font-size: 1.6rem;
   margin: 0;
-  font-family: "shrikhand", sans-serif;
+  font-family: "roboto", sans-serif;
 }
 h2 {
   width: 100%;
@@ -800,7 +803,7 @@ margin-top: 20px;
 @media (min-width: 343px) and (max-width: 768.98px)  {
   .like-button{
     position: absolute;
-    margin-left: 35px;
+    margin-left: 20px;
 }
   
   .button {

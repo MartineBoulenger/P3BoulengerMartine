@@ -49,7 +49,7 @@ p {
     position: absolute;
     height: 0%;
     background-image: linear-gradient(#9356DC, #FF79DA);
-    background-clip: text;
+
     -webkit-background-clip: text;
     color: transparent;
     transition: height 1000ms; }
@@ -65,7 +65,7 @@ p {
       transition: height 1000ms; }
     .like-button__container:hover > .like-button--empty {
       background-image: linear-gradient(#9356DC, #FF79DA);
-      background-clip: text;
+  
       -webkit-background-clip: text;
       color: transparent; }
 
@@ -102,7 +102,7 @@ p {
   z-index: 1;
   height: 100vh;
   width: 100vw;
-  background-color: linear-gradient(#99E2D0, #FF79DA, #9356DC, #FF79DA, #99E2D0);
+  background-color: #99E2D0;
   animation: load-page_slide 1500ms 5000ms forwards; }
 
 @keyframes card-slide {
@@ -402,7 +402,7 @@ h2 {
 h3 {
   font-family: "roboto", sans-serif;
   font-size: 1.5rem;
-  margin: 2.5 0 1.5 0; }
+  margin:0 0 1.5rem 0; }
 
 h4 {
   color: #fff;
@@ -610,8 +610,7 @@ h4 {
   .like-button--full {
     position: absolute;
     height: 0%;
-    background-image: linear-gradient(#9356DC, #FF79DA);
-    background-clip: text;
+    background-color:#FF79DA;
     -webkit-background-clip: text;
     color: transparent;
     transition: height 1000ms; }
@@ -629,7 +628,7 @@ h4 {
       transition: height 1000ms; }
     .like-button__container:hover > .like-button--empty {
       background-image: linear-gradient(#9356DC, #FF79DA);
-      background-clip: text;
+     
       -webkit-background-clip: text;
       color: transparent; }
 
